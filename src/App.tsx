@@ -1,6 +1,6 @@
 import './App.css'
 import Widget from "./components/widget/Widget.tsx";
-import DoughnutChart from "./components/pie-chart/DoughnutChart.tsx";
+import DoughnutChart from "./components/doughnut-chart/DoughnutChart.tsx";
 
 function App() {
 
