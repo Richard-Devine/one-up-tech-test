@@ -1,14 +1,21 @@
 .doughnut-container {
     position: relative;
     width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
-.doughnut-chart {
+.doughnut-chart-underlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.doughnut-chart-overlay {
     position: absolute;
-    top: 40px;
+    top: 0;
     left: 0;
-    width: 200px;
-    height: 200px;
+    width: 100%;
 }
 
 .doughnut-chart-text-container {

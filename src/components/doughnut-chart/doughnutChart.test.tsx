@@ -7,8 +7,10 @@ jest.mock('react-chartjs-2');
 
 test('Doughnut charts exist', async () => {
     render(<DoughnutChart fillPercent={60}/>)
-    const charts = await screen.findAllByTestId('doughnut-chart')
-    expect(charts.length).toEqual(2)
+    const chartUnderlay = await screen.findAllByTestId('doughnut-chart-underlay')
+    const chartOverlay = await screen.findAllByTestId('doughnut-chart-overlay')
+    expect(chartUnderlay.length).toEqual(1)
+    expect(chartOverlay.length).toEqual(1)
 });
 
 const titles = ['Test title 1', 'Test title 2', ''];

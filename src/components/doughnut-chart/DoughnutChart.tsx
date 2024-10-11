@@ -46,7 +46,7 @@ const DoughnutChart = React.memo((
             <div className={'doughnut-title'}>
                 <p data-testid={'doughnut-title'}>{title}</p>
             </div>
-            <div className={'doughnut-chart'} data-testid='doughnut-chart'>
+            <div className={'doughnut-chart-underlay'} data-testid='doughnut-chart-underlay'>
                 <Doughnut
                     options={{
                         ...options, animation: false
@@ -59,26 +59,26 @@ const DoughnutChart = React.memo((
                             borderWidth: 0
                         }]
                     }}/>
-            </div>
-            <div className={'doughnut-chart'} data-testid='doughnut-chart'>
-                <Doughnut
-
-                    options={options}
-                    data={{
-                        datasets: [{
-                            data: [fillPercent, 100 - fillPercent],
-                            backgroundColor: [backgroundColour(fillPercent), 'transparent'],
-                            hoverBackgroundColor: [backgroundColour(fillPercent), 'transparent'],
-                            borderRadius: fillPercent < 100 ? 10 : 0,
-                            borderWidth: 0
-                        }]
-                    }}/>
-                <div className={'doughnut-chart-text-container'}>
-                    {fillPercentText ?
-                        <p className='fill-percent-text' data-testid={'doughnut-fill-percent-text'}>{fillPercent}%</p>
-                        : null
-                    }
-                    <p className='center-text' data-testid={'doughnut-center-text'}>{centerText}</p>
+                <div className={'doughnut-chart-overlay'} data-testid='doughnut-chart-overlay'>
+                    <Doughnut
+                        options={options}
+                        data={{
+                            datasets: [{
+                                data: [fillPercent, 100 - fillPercent],
+                                backgroundColor: [backgroundColour(fillPercent), 'transparent'],
+                                hoverBackgroundColor: [backgroundColour(fillPercent), 'transparent'],
+                                borderRadius: fillPercent < 100 ? 10 : 0,
+                                borderWidth: 0
+                            }]
+                        }}/>
+                    <div className={'doughnut-chart-text-container'}>
+                        {fillPercentText ?
+                            <p className='fill-percent-text'
+                               data-testid={'doughnut-fill-percent-text'}>{fillPercent}%</p>
+                            : null
+                        }
+                        <p className='center-text' data-testid={'doughnut-center-text'}>{centerText}</p>
+                    </div>
                 </div>
             </div>
         </div>
