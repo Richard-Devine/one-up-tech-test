@@ -3,9 +3,10 @@
     flex-direction: column;
     justify-content: space-between;
     width: 220px;
+    gap: 24px;
 }
 
 .commission-totals p {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-h1);
     margin: 0;
 }
