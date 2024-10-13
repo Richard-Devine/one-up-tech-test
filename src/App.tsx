@@ -31,7 +31,7 @@ function App() {
 
     const onChangeHandler = (value: string) => {
         const valueInPence = Number(parseFloat(value) * 100)
-        setTestValue(valueInPence.toString())
+        setTestValue(value)
         const commission = calculateCommission(valueInPence)
         setCommissionRatesAndValues(commission)
     }
