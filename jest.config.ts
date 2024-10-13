@@ -1,9 +1,14 @@
 export default {
-  testEnvironment: "jest-environment-jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-  moduleNameMapper: {
-    "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/test/__mocks__/fileMock.js",
-    "\\.(css|less|sass|scss)$": "identity-obj-proxy",
-    "^@/(.*)$": "<rootDir>/src/$1",
-  },
+    testEnvironment: "jest-environment-jsdom",
+    setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+    moduleNameMapper: {
+        "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/test/__mocks__/fileMock.js",
+        "\\.(css|less|sass|scss)$": "identity-obj-proxy",
+        "^@/(.*)$": "<rootDir>/src/$1",
+    },
+    coveragePathIgnorePatterns: [
+        "/node_modules/",
+        "/src/index.tsx",
+        "/src/vite-env.d.ts"
+    ]
 };
