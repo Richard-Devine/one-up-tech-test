@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# One Up Tech Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my OneUp Tech Test which I have hosted on AWS using Amplify
 
-Currently, two official plugins are available:
+Click [here](https://master.djc924lmzkk9n.amplifyapp.com) to view online
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Notes
 
-## Expanding the ESLint configuration
+I have built and designed the widget as closely as I could to the images provided and tried to incorporate gamification
+into it. I have unit tested the components with 100% coverage. I have built the components to be as reusable a generic 
+as possible so that should any extension need to be done to the test it can be done with ease and speed.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Should I have had more time I would have included integration and UI tests as well as make the Input component 
+much more generic with the ability to RegEx check different input types (email addresses, text only, etc). 
+The widget component titles also need some icons to go a long side them.
 
-- Configure the top-level `parserOptions` property like this:
+## Scripts
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### `npm run dev`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+To run the project locally
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### `npm run test`
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+To run all the tests in the repo
+
+### `npm run cov`
+
+To run all the test with coverage
