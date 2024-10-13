@@ -1,8 +1,6 @@
 .doughnut-container {
     position: relative;
     width: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
 }
 
 .doughnut-chart-underlay {
@@ -32,9 +30,4 @@
 
 .fill-percent-text {
     font-size: var(--font-size-h1);
-}
-
-.doughnut-title {
-    width: 100%;
-    margin: 16px;
 }

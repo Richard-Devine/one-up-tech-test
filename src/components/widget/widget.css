@@ -2,11 +2,20 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    gap: 16px;
+    gap: 24px;
     padding: 16px;
+    margin: 16px;
+    background: white;
+    border-radius: var(--border-radius-default);
+    border: var(--border-default);
+    box-shadow: 1px 1px 1px 1px #dcd9d9;
+    justify-content: space-around;
 }
 
 .widget-header {
     width: 100%;
+}
+
+.widget-header > h3 {
+    margin: 0;
 }
