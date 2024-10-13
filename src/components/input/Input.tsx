@@ -22,6 +22,7 @@ const Input = React.memo(({ placeholder, onChangeHandler, value }: Props) => {
                 className='input'
                 onChange={(e) => regexCheck(e.target.value)}
                 value={value}
+                name={'revenue-input'}
                 data-testid={'input'}
             />
         </div>
