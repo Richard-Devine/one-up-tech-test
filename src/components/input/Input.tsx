@@ -3,15 +3,15 @@ import './input.css'
 
 interface Props {
     placeholder?: string;
-    setTestValue: (value: string) => void;
+    onChangeHandler: (value: string) => void;
     value: string;
 }
-const Input = React.memo(({ placeholder, setTestValue, value }: Props) => {
+const Input = React.memo(({ placeholder, onChangeHandler, value }: Props) => {
 
-    const onChangeHandler = (value: string) => {
+    const regexCheck = (value: string) => {
         const regex = new RegExp('^(?:(\\d+)|(\\d*\\.\\d{0,2}))?$')
         if (regex.test(value)) {
-            setTestValue(value)
+            onChangeHandler(value)
         }
     }
 
@@ -20,7 +20,7 @@ const Input = React.memo(({ placeholder, setTestValue, value }: Props) => {
             <input
                 placeholder={placeholder}
                 className='input'
-                onChange={(e) => onChangeHandler(e.target.value)}
+                onChange={(e) => regexCheck(e.target.value)}
                 value={value}
                 data-testid={'input'}
             />
