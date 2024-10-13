@@ -20,7 +20,6 @@ const colours = {
 
 const DoughnutChart = React.memo((
     {
-        title = '',
         fillPercent,
         fillPercentText,
         centerText = '',
@@ -43,9 +42,6 @@ const DoughnutChart = React.memo((
 
     return (
         <div className={'doughnut-container'} data-testid='doughtnut-container'>
-            <div className={'doughnut-title'}>
-                <p data-testid={'doughnut-title'}>{title}</p>
-            </div>
             <div className={'doughnut-chart-underlay'} data-testid='doughnut-chart-underlay'>
                 <Doughnut
                     options={{

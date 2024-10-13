@@ -13,13 +13,6 @@ test('Doughnut charts exist', async () => {
     expect(chartOverlay.length).toEqual(1)
 });
 
-const titles = ['Test title 1', 'Test title 2', ''];
-test.each(titles)('Title text exist', (title) => {
-    render(<DoughnutChart fillPercent={60} title={title}/>)
-    const titleComponent = screen.getByTestId('doughnut-title')
-    expect(titleComponent).toHaveTextContent(title)
-});
-
 const fillPercentages = [60, 46, 100, 3];
 test.each(fillPercentages)('Fill percent text exists', (fillPercent) => {
     render(<DoughnutChart fillPercent={fillPercent} fillPercentText />);

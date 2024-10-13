@@ -1,0 +1,16 @@
+.widget-component-wrapper {
+    padding: 8px;
+    border: var(--border-default);
+    border-radius: var(--border-radius-default);
+}
+
+.widget-component-wrapper-title {
+    width: 100%;
+}
+
+.widget-component-wrapper-title > p {
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size-small);
+    font-weight: 500;
+}
