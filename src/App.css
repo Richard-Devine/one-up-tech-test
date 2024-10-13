@@ -1,1 +1,10 @@
+.commission-totals {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.commission-totals p {
+    font-size: var(--font-size-large);
+    margin: 0;
+}
