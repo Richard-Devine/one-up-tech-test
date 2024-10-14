@@ -7,7 +7,7 @@ Click [here](https://master.djc924lmzkk9n.amplifyapp.com) to view online
 ## Notes
 
 I have built and designed the widget as closely as I could to the images provided and tried to incorporate gamification
-into it. I have unit tested the components with 100% coverage. I have built the components to be as reusable a generic 
+into it. I have unit tested the components with 100% coverage. I have built the components to be as reusable and generic 
 as possible so that should any extension need to be done to the test it can be done with ease and speed.
 
 Should I have had more time I would have included integration and UI tests as well as make the Input component 
